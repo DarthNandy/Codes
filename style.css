@@ -1,0 +1,21 @@
+body {
+    background: #2b2d34 url(Images/black.jpg) center;
+    background-attachment: fixed;
+}
+.container{
+   
+    padding: 10px;
+    
+}
+#carouselExampleControls{
+    overflow: auto;
+}
+.display-1{
+    color: aliceblue;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+.intro{
+    text-align:center;
+}

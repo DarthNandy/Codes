@@ -1,0 +1,26 @@
+
+        <div class="card mb-3" style="max-width: 920px;">
+          <div class="row no-gutters">
+              <div class="col-mb-4">
+              <img src='{{r.image}}'class="card-img-top" alt="...">
+          </div>
+          <div class="col-md-8">
+          <div class="card-body text-dark">
+            <h5 class="card-title">{{r.name}}</h5>
+            <p class="card-text">{{r.type}} Cuisine</p>
+            <p class="card-text"><small class="text-muted">{{r.info}}</small></p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Button with data-target
+            </button>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+               {{r.ing}}
+              </div>
+            </div>
+            
+                </div>
+          </div>
+        </div>
+      </div>
+      
+      
