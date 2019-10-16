@@ -9,10 +9,10 @@
             <h5 class="card-title">{{r.name}}</h5>
             <p class="card-text">{{r.type}} Cuisine</p>
             <p class="card-text"><small class="text-muted">{{r.info}}</small></p>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"ng-click="select(r)"ng-model="r">
               Button with data-target
             </button>
-            <div class="collapse" id="collapseExample">
+            <div class="collapse" id="collapseExample"ng-show="r===redit">
               <div class="card card-body">
                {{r.ing}}
               </div>

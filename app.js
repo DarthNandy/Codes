@@ -28,8 +28,8 @@ RecipeApp.service('dataService',function(){
 RecipeApp.controller('homeController', ['$scope','$log','dataService', function($scope,$log,dataService) {
     $scope.recipe = Recipe;
     console.log("service",dataService.cuisines);
-    $scope.select= function(){
-        $scope.recipe.display="inline";
+    $scope.select= function(r){
+        $scope.redit = r;
 
     }
 
@@ -41,6 +41,10 @@ RecipeApp.controller('homeController', ['$scope','$log','dataService', function(
 RecipeApp.controller('navController', ['$scope','$log','dataService','$routeParams', function($scope,$log,dataService,$routeParams) {
   
    $scope.unique_result = dataService.unique_results;
+   $scope.select= function(r){
+    $scope.redit = r;
+
+}
    $scope.dish = $routeParams.dish;
    console.log($scope.dish)
    $scope.handle = dataService.handle;
@@ -53,6 +57,10 @@ RecipeApp.controller('navController', ['$scope','$log','dataService','$routePara
 }]);
 RecipeApp.controller('cuisineController', ['$scope','$log','dataService','$routeParams', function($scope,$log,dataService,$routeParams) {
     $scope.selectedCuisine = dataService.cuisines;
+    $scope.select= function(r){
+        $scope.redit = r;
+
+    }
     $scope.dish = $routeParams.dish;
     $scope.$watch('handle',function(){
         dataService.handle = $scope.handle;
@@ -75,6 +83,10 @@ RecipeApp.controller('cuisineController', ['$scope','$log','dataService','$route
 }]);
 RecipeApp.controller('recipeController', ['$scope','$log','dataService','$routeParams', function($scope,$log,dataService,$routeParams) {
     $scope.selectedCuisine = dataService.cuisines;
+    $scope.select= function(r){
+        $scope.redit = r;
+
+    }
     $scope.handle = dataService.handle;
     $scope.$watch('handle',function(){
         dataService.handle = $scope.handle;
